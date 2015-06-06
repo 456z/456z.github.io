@@ -66,13 +66,13 @@ var buy = setInterval(function(){
 		var child = $('#pu11');
 		var childId = $(child).prop('id');
 
-		var amountToBuy = $('#powerupstore').find('input[data-pu='+childId+']');
-		var oldAmount = $('#'+childId).find('.storeItemAmount').html();
+		/*var amountToBuy = $('#powerupstore').find('input[data-pu='+childId+']');
+		var oldAmount = $('#'+childId).find('.storeItemAmount').html();*/
 		var price = $('#'+childId).find('.storePrice').text();
 		var max = $('#memoryLimit').find('.amount').text();
 		
 
-		if($(amountToBuy).val() > 0 || $(amountToBuy).val() == -1) {
+		//if($(amountToBuy).val() > 0 || $(amountToBuy).val() == -1) {
 			if(compareBytes(price, max)) {
 				sDrip = true;
 				//break;
@@ -82,7 +82,7 @@ var buy = setInterval(function(){
 			//if(!increase(child, amountToBuy, oldAmount)) {
 			//	break;
 			//}
-		}
+		//}
 	//}
 },10000);
 
