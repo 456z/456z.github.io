@@ -4,7 +4,7 @@ var sDrip = false;
 
 
 //init
-$('.schniptest').remove();
+/*$('.schniptest').remove();
 $(function(){
 	var child = $('#powerupstore').children();
 	for(var i = 0; i < child.length; i++) {
@@ -14,7 +14,7 @@ $(function(){
 		$('#powerupstore').append('<input class="schniptest" data-pu="'+puId+'" type="NUMBER" min="-1" max="1000" step="1" value="0" size="0" style="float: right;position: absolute;top: '+pos.top+'px;left: -39px;">');
 	}
 
-});
+});*/
 
 var set = setInterval(function(){
 	$('#btn-addMem').trigger('click');
@@ -26,9 +26,15 @@ var drip = setInterval(function(){
   }
 },10000);
 
+var checkError = setInterval(function(){
+	if($('#networkError').is(':visible')) {
+		location.reload();
+	}
+},60000);
+
 
 clearInterval(buy);
-var buy = setInterval(function(){
+/*var buy = setInterval(function(){
 	var children = $('#powerupstore').find('.storeItem');
 	for(var i = children.length; i >= 0; i--){
 		var child = $(children[i]);
@@ -52,6 +58,32 @@ var buy = setInterval(function(){
 			}
 		}
 	}
+},10000);*/
+
+var buy = setInterval(function(){
+	var children = $('#powerupstore').find('.storeItem');
+	//for(var i = children.length; i >= 0; i--){
+		var child = $('#pu11');
+		var childId = $(child).prop('id');
+
+		var amountToBuy = $('#powerupstore').find('input[data-pu='+childId+']');
+		var oldAmount = $('#'+childId).find('.storeItemAmount').html();
+		var price = $('#'+childId).find('.storePrice').text();
+		var max = $('#memoryLimit').find('.amount').text();
+		
+
+		if($(amountToBuy).val() > 0 || $(amountToBuy).val() == -1) {
+			if(compareBytes(price, max)) {
+				sDrip = true;
+				break;
+			} else {
+				sDrip = false;
+			}
+			if(!increase(child, amountToBuy, oldAmount)) {
+				break;
+			}
+		}
+	//}
 },10000);
 
 function increase(child, amountToBuy, oldAmount) {
