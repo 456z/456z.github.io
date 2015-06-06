@@ -104,30 +104,36 @@ function increase(child, amountToBuy, oldAmount) {
 function compareBytes(first, second) {
 	if(first.match(/[0-9]+\.?[0-9]* bytes/) != null) {
 		first = first.replace(" bytes", "");
-		first = first/1024/1024/1024;
+		first = first/1024/1024/1024/1024;
 	} else if(first.match(/[0-9]+\.?[0-9]* kB/) != null) {
 		first = first.replace(" kB", "");
-		first = first/1024/1024;
+		first = first/1024/1024/1024;
 	} else if(first.match(/[0-9]+\.?[0-9]* MB/) != null) {
 		first = first.replace(" MB", "");
-		first = first/1024;
+		first = first/1024/1024;
 	} else if(first.match(/[0-9]+\.?[0-9]* GB/) != null) {
 		first = first.replace(" GB", "");	
+		first = first/1024;
+	} else if(first.match(/[0-9]+\.?[0-9]* TB/) != null) {
+		first = first.replace(" TB", "");	
 		first = first;
 	}
 	
 	
 	if(second.match(/[0-9]+\.?[0-9]* bytes/) != null) {
 		second = second.replace(" bytes", "");
-		second = second/1024/1024/1024;
+		second = second/1024/1024/1024/1024;
 	} else if(second.match(/[0-9]+\.?[0-9]* kB/) != null) {
 		second = second.replace(" kB", "");
-		second = second/1024/1024;
+		second = second/1024/1024/1024;
 	} else if(second.match(/[0-9]+\.?[0-9]* MB/) != null) {
 		second = second.replace(" MB", "");
-		second = second/1024;
+		second = second/1024/1024;
 	} else if(second.match(/[0-9]+\.?[0-9]* GB/) != null) {
 		second = second.replace(" GB", "");	
+		second = second/1024;
+	} else if(second.match(/[0-9]+\.?[0-9]* TB/) != null) {
+		second = second.replace(" TB", "");	
 		second = second;
 	}
 	
