@@ -79,9 +79,9 @@ var buy = setInterval(function(){
 			} else {
 				sDrip = false;
 			}
-			if(!increase(child, amountToBuy, oldAmount)) {
-				break;
-			}
+			//if(!increase(child, amountToBuy, oldAmount)) {
+			//	break;
+			//}
 		}
 	//}
 },10000);
