@@ -75,7 +75,7 @@ var buy = setInterval(function(){
 		if($(amountToBuy).val() > 0 || $(amountToBuy).val() == -1) {
 			if(compareBytes(price, max)) {
 				sDrip = true;
-				break;
+				//break;
 			} else {
 				sDrip = false;
 			}
