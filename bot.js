@@ -1,7 +1,7 @@
 //sIZJUqi7TZun8E_lxxnrJA
 
 var sDrip = false;
-var toFarm = '#pu10';
+var toFarm = '#pu11';
 
 
 //init
