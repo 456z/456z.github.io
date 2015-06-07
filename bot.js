@@ -1,6 +1,7 @@
 //sIZJUqi7TZun8E_lxxnrJA
 
 var sDrip = false;
+var toFarm = '#pu10';
 
 
 //init
@@ -63,7 +64,7 @@ clearInterval(buy);
 var buy = setInterval(function(){
 	var children = $('#powerupstore').find('.storeItem');
 	//for(var i = children.length; i >= 0; i--){
-		var child = $('#pu11');
+		var child = $(toFarm);
 		var childId = $(child).prop('id');
 
 		/*var amountToBuy = $('#powerupstore').find('input[data-pu='+childId+']');
