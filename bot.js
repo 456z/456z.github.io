@@ -139,7 +139,8 @@ function compareBytes(first, second) {
 		second = second;
 	}
 	
-	//console.log(first, second);
+	//console.log(first + " " + second);
+	//console.log(parseFloat(first) > parseFloat(second));
 
-	return first > second;
+	return parseFloat(first) > parseFloat(second);
 }
