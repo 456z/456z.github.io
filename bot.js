@@ -17,8 +17,13 @@ $(function(){
 
 });*/
 
-var set = setInterval(function(){
+/*var set = setInterval(function(){
 	$('#btn-addMem').trigger('click');
+},50);*/
+
+var set = setInterval(function(){
+	var t = CoffeeCup.calcBytesPerClick();
+    localStats.byteCount + t > localStats.memoryCapacity && (t = localStats.memoryCapacity - localStats.byteCount), localStats.byteCount += t
 },50);
 
 var drip = setInterval(function(){
