@@ -5,7 +5,7 @@ var toFarm = '#pu11';
 
 var clickBot = setInterval(clickBot,50);
 var buyBot = setInterval(buyBot,10000);
-var dripBot = /*setInterval(dripBot,10000)*/;
+/*var dripBot = setInterval(dripBot,10000);*/
 
 
 
