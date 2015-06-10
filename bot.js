@@ -12,13 +12,13 @@ var dripBotI = null;
 //init
 $('.schniptest').remove();
 $(function(){
-	var child = $('#powerupstore').children();
+	/*var child = $('#powerupstore').children();
 	for(var i = 0; i < child.length; i++) {
 
 		var pos = $(child[i]).position();
 		var puId = $(child[i]).prop('id')
 		$('#powerupstore').append('<div class="schniptest col-sm-3" style="float: right;position: absolute;top: '+(pos.top+25)+'px;right: 65px;"><input class="pu-upgrader form-control" data-pu="'+puId+'" type="NUMBER" min="-1" max="1000" step="1" value="0" size="0" ></div>');
-	}
+	}*/
 	var append = '                <div id="dripBotTAH" style="text-align:left;">                	<div>                		<h5>Click bot:</h5>						<div class="form-inline">							<button id="startBot" class="btn btn-primary">Start</button>							<label class="checkbox-inline">								<input type="checkbox" id="showAnimation" value=""> show animation							</label>						</div>						<div>							<label>memory/sec: <label id="memoryPerSec">843 MB</label></label>						</div>						<div>							<label>memory/min: <label id="memoryPerMin">843 MB</label></label>						</div>						<div>							<label>memory/hr: <label id="memoryPerHr">843 MB</label></label>						</div>                	</div>                	<div class="form-inline">                		<div class="form-group">							<label class="checkbox-inline">								<input  class="" type="checkbox" id="autoDrip" value=""> auto drip							</label>							<input type="text" id="autoDripValue" class="form-control" placeholder="drip after x seconds...">						</div>                	</div>                </div>';
 	$('#middleColumn').append(append);
 	updateBPS();
