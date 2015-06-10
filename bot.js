@@ -80,7 +80,7 @@ function buyBot(){
 		}
 	}
 	
-	for(var key : upgrades) {
+	for(var key in upgrades) {
 		if(hasNormalBuy && upgrades[key] == -1) {
 			continue;
 		}
