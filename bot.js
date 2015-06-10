@@ -3,9 +3,9 @@
 var sDrip = false;
 var toFarm = '#pu11';
 
-var clickBot = setInterval(clickBot,50);
-var buyBot = setInterval(buyBot,10000);
-/*var dripBot = setInterval(dripBot,10000);*/
+var clickBot = null;
+var buyBot = null;
+var dripBot = null;
 
 
 
@@ -85,6 +85,7 @@ function buyBot(){
 		var price = $('#'+childId).find('.storePrice').text();
 		var max = $('#memoryLimit').find('.amount').text();
 		
+		
 
 		if($(amountToBuy).val() > 0 || $(amountToBuy).val() == -1) {
 			if(compareBytes(price, max)) {
@@ -99,6 +100,7 @@ function buyBot(){
 		}
 	}
 }
+var buyBot = setInterval(buyBot,10000);
 
 
 
@@ -165,3 +167,8 @@ var checkError = setInterval(function(){
 		location.reload();
 	}
 },60000);
+
+clickBot = setInterval(clickBot,50);
+buyBot = setInterval(buyBot,10000);
+dripBot = setInterval(dripBot,10000);
+
