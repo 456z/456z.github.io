@@ -69,7 +69,7 @@ function clickBot() {
 }*/
 
 function buyBot(){
-	var upgrades = {};
+	var upgrades = new Array();
 	var upgradesInput = $('#powerupstore').find('.schniptest input');
 	var hasNormalBuy = false;
 	
@@ -78,20 +78,22 @@ function buyBot(){
 	var oldAmount   = 0;   
 	var max = $('#memoryLimit').find('.amount').text();
 	
-	for(var i = upgradesInput.length; i >= 0; i--){
+	for(var i = 0; i < upgradesInput.length; i++){
 		if($(upgradesInput[i]).length && $(upgradesInput[i]).val() != 0) {
-			upgrades[$(upgradesInput[i]).data('pu')] = $(upgradesInput[i]).val();
+			upgrades.push($(upgradesInput[i]).data('pu'));
 			hasNormalBuy = $(upgradesInput[i]).val() != -1;
 		}
 	}
 	
 	for(var key in upgrades) {
-		if(hasNormalBuy && upgrades[key] == -1) {
+		amountToBuy = $('#powerupstore').find('input[data-pu='+key+']');
+	
+	
+		if(hasNormalBuy && amountToBuy == -1) {
 			continue;
 		}
 		
 		price       = $('#'+key).find('.storePrice').text();
-		amountToBuy = $('#powerupstore').find('input[data-pu='+key+']');
 		oldAmount   = $('#'+key).find('.storeItemAmount').html();
 
 	
