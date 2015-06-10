@@ -38,7 +38,7 @@ $(function(){
 
 function dripBot(){
   if(sDrip){
-	$('#btn-addGlobalMem').trigger('click');
+	AnonymousUserManager.canDrip() && (game.dpChCnt++, game.dpChCnt >= 20 || dripper.dripGlobal(!1))
   }
 }
 
