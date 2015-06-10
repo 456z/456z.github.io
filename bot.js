@@ -102,7 +102,7 @@ function buyBot(){
 			sDrip = false;
 		}
 		
-		if(!increase(child, amountToBuy, oldAmount)) {
+		if(!increase($('#'+key), amountToBuy, oldAmount)) {
 			break;
 		} else {
 			updateBPS();
