@@ -14,7 +14,7 @@ var dripBotI = null;
 //init
 $('.schniptest').remove();
 $(function(){
-	var child = $('#powerupstore').children();
+	/*var child = $('#powerupstore').children();
 	for(var i = 0; i < child.length; i++) {
 
 		var pos = $(child[i]).position();
@@ -221,5 +221,5 @@ var checkError = setInterval(function(){
 },60000);
 
 clickBotI = setInterval(clickBot,50);
-buyBotI = setInterval(buyBot,10000);
+/*buyBotI = setInterval(buyBot,10000);*/
 
