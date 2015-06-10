@@ -73,6 +73,11 @@ function buyBot(){
 	var upgradesInput = $('#powerupstore').find('.schniptest input');
 	var hasNormalBuy = false;
 	
+	var price = 0;
+	var amountToBuy = 0;
+	var oldAmount   = 0;   
+	var max = $('#memoryLimit').find('.amount').text();
+	
 	for(var i = upgradesInput.length; i >= 0; i--){
 		if($(upgradesInput[i]).length && $(upgradesInput[i]).val() != 0) {
 			upgrades[$(upgradesInput[i]).data('pu')] = $(upgradesInput[i]).val();
@@ -84,6 +89,11 @@ function buyBot(){
 		if(hasNormalBuy && upgrades[key] == -1) {
 			continue;
 		}
+		
+		price       = $('#'+key).find('.storePrice').text();
+		amountToBuy = $('#powerupstore').find('input[data-pu='+key+']');
+		oldAmount   = $('#'+key).find('.storeItemAmount').html();
+
 	
 		if(compareBytes(price, max)) {
 			sDrip = true;
