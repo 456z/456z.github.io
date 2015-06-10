@@ -86,15 +86,16 @@ function buyBot(){
 	}
 	
 	for(var key in upgrades) {
-		amountToBuy = $('#powerupstore').find('input[data-pu='+key+']');
+		var childId = upgrades[key];
+		amountToBuy = $('#powerupstore').find('input[data-pu='+childId+']');
 	
 	
 		if(hasNormalBuy && amountToBuy == -1) {
 			continue;
 		}
 		
-		price       = $('#'+key).find('.storePrice').text();
-		oldAmount   = $('#'+key).find('.storeItemAmount').html();
+		price       = $('#'+childId).find('.storePrice').text();
+		oldAmount   = $('#'+childId).find('.storeItemAmount').html();
 
 	
 		if(compareBytes(price, max)) {
@@ -104,7 +105,7 @@ function buyBot(){
 			sDrip = false;
 		}
 		
-		if(!increase($('#'+key), amountToBuy, oldAmount)) {
+		if(!increase($('#'+childId), amountToBuy, oldAmount)) {
 			break;
 		} else {
 			updateBPS();
