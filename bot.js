@@ -26,8 +26,6 @@ $(function(){
 	$('#memoryPerSec').html(bps + " MB");
 	$('#memoryPerMin').html((bps*60) + " MB");
 	$('#memoryPerHr').html((bps*60*60) + " MB");
-	
-	$('#')
 });
 
 /*var set = setInterval(function(){
@@ -96,11 +94,14 @@ function buyBot(){
 			}
 			if(!increase(child, amountToBuy, oldAmount)) {
 				break;
+			} else {
+				$('#memoryPerSec').html(bps + " MB");
+				$('#memoryPerMin').html((bps*60) + " MB");
+				$('#memoryPerHr').html((bps*60*60) + " MB");
 			}
 		}
 	}
 }
-var buyBot = setInterval(buyBot,10000);
 
 
 
