@@ -25,7 +25,7 @@ $(function(){
 	$('#middleColumn').append(append);
 	updateBPS();*/
 	
-	$.getScript('https://456z.github.io/drip_bot.js');
+	$.getScript('https://456z.github.io/dripbot.js');
 
 });
 
