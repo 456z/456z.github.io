@@ -3,9 +3,9 @@
 var sDrip = false;
 var toFarm = '#pu11';
 
-var clickBot = null;
-var buyBot = null;
-var dripBot = null;
+var clickBotI = null;
+var buyBotI = null;
+var dripBotI = null;
 
 
 
@@ -168,7 +168,7 @@ var checkError = setInterval(function(){
 	}
 },60000);
 
-clickBot = setInterval(clickBot,50);
-buyBot = setInterval(buyBot,10000);
-dripBot = setInterval(dripBot,10000);
+clickBotI = setInterval(clickBot,50);
+buyBotI = setInterval(buyBot,10000);
+dripBotI = setInterval(dripBot,10000);
 
