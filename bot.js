@@ -74,9 +74,7 @@ function clickBot() {
 	//}
 }*/
 
-
-clearInterval(buy);
-var buy = setInterval(function(){
+function buyBot(){
 	var children = $('#powerupstore').find('.storeItem');
 	for(var i = children.length; i >= 0; i--){
 		var child = $(children[i]);
@@ -100,7 +98,7 @@ var buy = setInterval(function(){
 			}
 		}
 	}
-},10000);
+}
 
 
 
