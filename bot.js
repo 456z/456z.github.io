@@ -75,7 +75,7 @@ function buyBot(){
 	
 	for(var i = upgradesInput.length; i >= 0; i--){
 		if($(upgradesInput[i]).length && $(upgradesInput[i]).val() != 0) {
-			upgrades[$(upgradesInput[i]).data('pu')] = $(upgradesInput[i]).val());
+			upgrades[$(upgradesInput[i]).data('pu')] = $(upgradesInput[i]).val();
 			hasNormalBuy = $(upgradesInput[i]).val() != -1;
 		}
 	}
