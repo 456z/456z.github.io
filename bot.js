@@ -221,5 +221,4 @@ var checkError = setInterval(function(){
 },60000);
 
 clickBotI = setInterval(clickBot,50);
-/*buyBotI = setInterval(buyBot,10000);*/
 
