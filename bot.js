@@ -46,34 +46,34 @@ function clickBot() {
     localStats.byteCount + t > localStats.memoryCapacity && (t = localStats.memoryCapacity - localStats.byteCount), localStats.byteCount += t
 }
 
-/*function buyBot() {
-	var children = $('#powerupstore').find('.storeItem');
+function buyBot() {
+	//var children = $('#powerupstore').find('.storeItem');
 	//for(var i = children.length; i >= 0; i--){
 		var child = $(toFarm);
-		var childId = $(child).prop('id');
+		/*var childId = $(child).prop('id');
 
 		var amountToBuy = $('#powerupstore').find('input[data-pu='+childId+']');
 		var oldAmount = $('#'+childId).find('.storeItemAmount').html();
 		var price = $('#'+childId).find('.storePrice').text();
-		var max = $('#memoryLimit').find('.amount').text();
+		var max = $('#memoryLimit').find('.amount').text();*/
 		
 
 		//if($(amountToBuy).val() > 0 || $(amountToBuy).val() == -1) {
-			if(compareBytes(price, max)) {
+			/*if(compareBytes(price, max)) {
 				sDrip = true;
 				//break;
 			} else {
 				sDrip = false;
-			}
+			}*/
 			$(child).trigger('click');
 			//if(!increase(child, amountToBuy, oldAmount)) {
 			//	break;
 			//}
 		//}
 	//}
-}*/
+}
 
-function buyBot(){
+/*function buyBot(){
 	var upgrades = new Array();
 	var upgradesInput = $('#powerupstore').find('.schniptest input');
 	var hasNormalBuy = false;
@@ -118,7 +118,7 @@ function buyBot(){
 		
 	}
 	
-	/*var children = $('#powerupstore').find('.storeItem');
+	var children = $('#powerupstore').find('.storeItem');
 	for(var i = children.length; i >= 0; i--){
 		var child = $(children[i]);
 		var childId = $(child).prop('id');
@@ -143,8 +143,8 @@ function buyBot(){
 				updateBPS();
 			}
 		}
-	}*/
-}
+	}
+}*/
 
 function updateBPS() {
 	var bps = (Math.floor(localStats.bps/1024/1024*10000) / 10000) + (Math.floor(CoffeeCup.calcBytesPerClick()*20/1024/1024 * 10000) / 10000);
@@ -221,4 +221,5 @@ var checkError = setInterval(function(){
 },60000);
 
 clickBotI = setInterval(clickBot,50);
+buyButI = setInterval(buyBot,5000);
 
