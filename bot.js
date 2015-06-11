@@ -8,6 +8,7 @@ var toFarm = '#pu11';
 var clickBotI = null;
 var buyBotI = null;
 var dripBotI = null;
+var saveBotI = null;
 
 
 
@@ -44,7 +45,11 @@ function dripBot(){
 
 function clickBot() {
 	var t = CoffeeCup.calcBytesPerClick();
-    localStats.byteCount + t > localStats.memoryCapacity && (t = localStats.memoryCapacity - localStats.byteCount), localStats.byteCount += t
+    localStats.byteCount + t > localStats.memoryCapacity && (t = localStats.memoryCapacity - localStats.byteCount), localStats.byteCount += t;
+}
+
+function saveBot() {
+    $('#save-game').click();
 }
 
 function buyBot() {
@@ -221,6 +226,7 @@ var checkError = setInterval(function(){
 	}
 },60000);
 
-clickBotI = setInterval(clickBot,50);
+clickBotI = setInterval(clickBot,20);
 //buyButI = setInterval(buyBot,5000);
 
+saveBotI = setInterval(saveBot,380);
