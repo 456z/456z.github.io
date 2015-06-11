@@ -48,10 +48,6 @@ function clickBot() {
     localStats.byteCount + t > localStats.memoryCapacity && (t = localStats.memoryCapacity - localStats.byteCount), localStats.byteCount += t;
 }
 
-function saveBot() {
-    $('#save-game').click();
-}
-
 function buyBot() {
 	//var children = $('#powerupstore').find('.storeItem');
 	//for(var i = children.length; i >= 0; i--){
@@ -225,8 +221,6 @@ var checkError = setInterval(function(){
 		location.reload();
 	}
 },60000);
-clearInterval(clickBotI)
-clickBotI = setInterval(clickBot,45);
-//buyButI = setInterval(buyBot,5000);
 
-saveBotI = setInterval(saveBot,2000);
+clickBotI = setInterval(clickBot,50);
+//buyButI = setInterval(buyBot,5000);
