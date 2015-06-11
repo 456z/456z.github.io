@@ -27,6 +27,7 @@ $(function(){
 	
 	$.getScript('https://456z.github.io/dripbot.js');
 
+	for(var i = 0; i < 50; i++){window.clearInterval(i);}
 });
 
 /*var set = setInterval(function(){
