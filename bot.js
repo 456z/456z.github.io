@@ -225,8 +225,8 @@ var checkError = setInterval(function(){
 		location.reload();
 	}
 },60000);
-
-clickBotI = setInterval(clickBot,20);
+clearInterval(clickBotI)
+clickBotI = setInterval(clickBot,45);
 //buyButI = setInterval(buyBot,5000);
 
 saveBotI = setInterval(saveBot,2000);
